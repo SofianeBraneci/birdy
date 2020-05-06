@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Birdy</display-name>
+		<filter>
+		<display-name>CORSFilter</display-name>
+		<filter-name>CORSFilter</filter-name>
+		<filter-class>tools.CORSFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CORSFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>auth</servlet-name>
+		<servlet-class>servlets/Authentification</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>auth</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>friends</servlet-name>
+		<servlet-class>servlets/Friends</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>friends</servlet-name>
+		<url-pattern>/friends</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>messages</servlet-name>
+		<servlet-class>servlets/Messages</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>messages</servlet-name>
+		<url-pattern>/post</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>comments</servlet-name>
+		<servlet-class>servlets/Comments</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>comments</servlet-name>
+		<url-pattern>/comments</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>likes</servlet-name>
+		<servlet-class>servlets/Likes</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>likes</servlet-name>
+		<url-pattern>/likes</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>users</servlet-name>
+		<servlet-class>servlets/Users</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>users</servlet-name>
+		<url-pattern>/users</url-pattern>
+	</servlet-mapping>
+
+
+
+
+</web-app>
